@@ -28,7 +28,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="DetectionResultLabel" destination="6gy-Qq-iYG" id="R5K-da-cRr"/>
+                        <outlet property="detectionResultLabel" destination="6gy-Qq-iYG" id="Xtz-qS-ZwO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

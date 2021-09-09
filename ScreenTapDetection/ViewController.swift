@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController {
 
     
-    @IBOutlet weak var DetectionResultLabel: UILabel!
+    @IBOutlet weak var detectionResultLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +22,7 @@ class ViewController: UIViewController {
 
     @objc func screenTap(){
         
+        detectionResultLabel.text = "画面をタップしました"
         
     }
 
