@@ -9,11 +9,21 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    @IBOutlet weak var DetectionResultLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        let tapDetection = UITapGestureRecognizer(target: self, action: #selector(screenTap))
+        view.addGestureRecognizer(tapDetection)
+        
     }
 
+    @objc func screenTap(){
+        
+        
+    }
 
 }
 
