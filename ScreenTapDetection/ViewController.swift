@@ -52,7 +52,11 @@ class ViewController: UIViewController {
         
     }
 
-   
+    @objc func screenLongTap(){
+        
+        
+        
+    }
         
     
 }
