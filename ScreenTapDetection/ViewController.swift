@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     
     var gradient = CAGradientLayer()
     var tapCount = 0
+    var longTapCount = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,9 @@ class ViewController: UIViewController {
         
         let tapDetection = UITapGestureRecognizer(target: self, action: #selector(screenTap))
         view.addGestureRecognizer(tapDetection)
+        
+        let longtapDetection = UILongPressGestureRecognizer(target: self, action: #selector(screenLongTap))
+        view.addGestureRecognizer(longtapDetection)
         
     }
 
@@ -48,5 +52,8 @@ class ViewController: UIViewController {
         
     }
 
+   
+        
+    
 }
 
