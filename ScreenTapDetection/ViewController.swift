@@ -80,6 +80,10 @@ class ViewController: UIViewController {
     }
         
     
-   
+    @objc func screenSwipe(){
+        
+        swipeCount += 1
+        detectionResultLabel.text = "\(swipeCount)回、画面をスワイプしました"
+    }
 }
 
