@@ -29,12 +29,17 @@ class ViewController: UIViewController {
         view.addGestureRecognizer(longtapDetection)
         
         let swipeDetection = UISwipeGestureRecognizer(target: self, action: #selector(screenSwipe))
+        swipeDetection.direction = .down
+//        swipeDetection.direction = .left
+//        swipeDetection.direction = .right
+//        swipeDetection.direction = .up
         view.addGestureRecognizer(swipeDetection)
         
     }
 
     @objc func screenTap(){
         
+        print("screenTap")
         tapCount += 1
         detectionResultLabel.text = "\(tapCount)回、画面をタップしました"
         
@@ -57,7 +62,7 @@ class ViewController: UIViewController {
     }
 
     @objc func screenLongTap(){
-        
+        print("screenLongTap")
         longTapCount += 1
         detectionResultLabel.text = "\(longTapCount)回、画面をロングタップしました"
         
