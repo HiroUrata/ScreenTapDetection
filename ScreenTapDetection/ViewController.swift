@@ -28,14 +28,26 @@ class ViewController: UIViewController {
         let longtapDetection = UILongPressGestureRecognizer(target: self, action: #selector(screenLongTap))
         view.addGestureRecognizer(longtapDetection)
         
-        let swipeDetection = UISwipeGestureRecognizer(target: self, action: #selector(screenSwipe))
-        swipeDetection.direction = .down
-//        swipeDetection.direction = .left
-//        swipeDetection.direction = .right
-//        swipeDetection.direction = .up
-        view.addGestureRecognizer(swipeDetection)
+        //swipe 
+        let downSwipeDetection = UISwipeGestureRecognizer(target: self, action: #selector(downScreenSwipe))
+        downSwipeDetection.direction = .down
+        view.addGestureRecognizer(downSwipeDetection)
+        
+        let leftSwipeDetection = UISwipeGestureRecognizer(target: self, action: #selector(leftScreenSwipe))
+        leftSwipeDetection.direction = .left
+        view.addGestureRecognizer(leftSwipeDetection)
+        
+        let rightSwipeDetection = UISwipeGestureRecognizer(target: self, action: #selector(rightScreenSwipe))
+        rightSwipeDetection.direction = .right
+        view.addGestureRecognizer(rightSwipeDetection)
+        
+        let upSwipeDetection = UISwipeGestureRecognizer(target: self, action: #selector(upScreenSwipe))
+        upSwipeDetection.direction = .up
+        view.addGestureRecognizer(upSwipeDetection)
+        
         
     }
+
 
     @objc func screenTap(){
         
@@ -85,7 +97,26 @@ class ViewController: UIViewController {
     }
         
     
-    @objc func screenSwipe(){
+    @objc func downScreenSwipe(sender:UISwipeGestureRecognizer){
+        
+        swipeCount += 1
+        detectionResultLabel.text = "\(swipeCount)回、画面をスワイプしました"
+    }
+    
+    @objc func leftScreenSwipe(){
+        
+        swipeCount += 1
+        detectionResultLabel.text = "\(swipeCount)回、画面をスワイプしました"
+        
+    }
+    
+    @objc func rightScreenSwipe(){
+        
+        swipeCount += 1
+        detectionResultLabel.text = "\(swipeCount)回、画面をスワイプしました"
+    }
+    
+    @objc func upScreenSwipe(){
         
         swipeCount += 1
         detectionResultLabel.text = "\(swipeCount)回、画面をスワイプしました"
