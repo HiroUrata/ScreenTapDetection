@@ -45,6 +45,7 @@ class ViewController: UIViewController {
         upSwipeDetection.direction = .up
         view.addGestureRecognizer(upSwipeDetection)
         
+        self.view.isUserInteractionEnabled = false
         
     }
 
