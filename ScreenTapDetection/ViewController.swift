@@ -17,8 +17,17 @@ class ViewController: UIViewController {
     var longTapCount = 0
     var swipeCount = 0
     
+    var lesson01:String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        lesson01 = "nilじゃない"
+    
+        guard let result = lesson01 else { return }
+        
+        print(result)
+        
         
         gradient.frame = CGRect(x: self.view.frame.minX, y: self.view.frame.minY, width: self.view.frame.size.width, height: self.view.frame.size.height)
         
